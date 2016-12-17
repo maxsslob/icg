@@ -42,9 +42,9 @@
   },
   "defaults": {
     "styleExt": "sass",
-    "prefixInterfaces": false,
+    "prefixInterfaces": true,
     "inline": {
-      "style": false,
+      "style": true,
       "template": false
     },
     "spec": {

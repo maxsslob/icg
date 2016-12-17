@@ -1,3 +1,66 @@
-<h1>
-  {{title}}
-</h1>
+<div id="nav-container">
+  <div class="toggle-icon">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div><!-- /toggle-icon -->
+  <p>МЕНЮ</p>
+</div><!-- /nav-container -->
+
+<div class="menu-container">
+  // COOL MENU HERE :)
+</div>
+
+
+
+<router-outlet></router-outlet>
+
+
+
+
+<footer>
+  <div class="container">
+    <div class="col col-1">
+      <p>
+        ООО "Ай-Си-Джи групп"<br>
+        г. Минск, Победителей 127 <br>
+        офис 293.<span> УНП 192686750</span>
+      </p>
+    </div>
+    <hr class="first">
+    <div class="col col-2">
+      <nav class="footer-nav">
+        <ul>
+          <li><a routerLink="/">Главная</a></li>
+          <li><a routerLink="/portfolio">Кейсы</a></li>
+          <li><a href="/blog">Блог</a></li>
+        </ul>
+        <ul>
+          <li><a routerLink="/services">Услуги</a></li>
+          <li><a routerLink="/about">О Компании</a></li>
+          <li><a routerLink="/contact">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+    <hr class="second">
+    <div class="col col-3">
+      <ul class="social">
+        <li><a href="https://instagram.com/digitalagency_icg" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-instagram"></i>
+        </a></li>
+        <li><a href="https://vk.com/icg_by" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-vk"></i>
+        </a></li>
+        <li><a href="https://www.facebook.com/icg.by" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-facebook"></i>
+        </a></li>
+        <li><a href="https://behance.net/icg-by" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-behance"></i>
+        </a></li>
+      </ul>
+      <p id="madebyicg">
+        MADE WITH <i class="fa fa-heart"></i> BY ICG TEAM<br>&copy; ICG, 2016
+      </p>
+    </div>
+  </div>
+</footer>
