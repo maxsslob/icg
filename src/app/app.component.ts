@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     jQuery("#nav-container").click(function() {
       jQuery(this).toggleClass("pushed");
+      jQuery('.menu').toggleClass('menu-opened');
     });
   }
 }

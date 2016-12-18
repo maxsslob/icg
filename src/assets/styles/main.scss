@@ -92,3 +92,50 @@ footer{
   .col{@include transition()}
 }
 
+
+
+// MENU
+$menu-width: 270px;
+.menu{
+  position: absolute;
+  left: -$menu-width;
+  top: 0;
+  width: $menu-width;
+  height: 100%;
+  background-color: $black;
+  color: #ccc;
+  transition: left 0.3s ease-in-out;
+  .menu-container{
+    width: inherit;
+    height: inherit;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    nav{
+      li{
+        padding: 8px 0;
+      }
+      a{
+        font-size: 1.7em;
+        font-weight: 600;
+        transition: all 0.15s ease-in-out;
+        padding: 0px 90px 0px 0;
+        &:hover{
+          color: #efefef;
+        }
+      }
+    }
+  }
+}
+
+.active{
+  color: white;
+}
+
+.menu-opened{
+  left: 0;
+}
