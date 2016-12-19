@@ -6,6 +6,7 @@
 
 //PAGES
 @import './pages/home.scss';
+@import './pages/contact.scss';
 
 $container-width: 960px;
 $margin-top: 30px;
@@ -14,9 +15,13 @@ $margin-top: 30px;
   transition: all 0.2s ease-in;
 }
 
+html{height: 100%;}
+
 body{
   font-family: 'Visby CF Medium';
   font-size: 14px;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 footer{
@@ -95,15 +100,17 @@ footer{
 
 
 // MENU
-$menu-width: 270px;
+$menu-width: 262px;
+$shadow-width: 8px;
 .menu{
   position: absolute;
-  left: -$menu-width;
+  left: -$menu-width - $shadow-width;
   top: 0;
   width: $menu-width;
   height: 100%;
   background-color: $black;
   color: #ccc;
+  box-shadow: $shadow-width 0 $shadow-width 0 rgba(0,0,0,.5);
   transition: left 0.3s ease-in-out;
   .menu-container{
     width: inherit;
@@ -114,7 +121,7 @@ $menu-width: 270px;
     display: -o-flex;
     display: flex;
     align-items: center;
-    margin-left: 40px;
+    margin-left: 35px;
     nav{
       li{
         padding: 8px 0;
@@ -138,4 +145,56 @@ $menu-width: 270px;
 
 .menu-opened{
   left: 0;
+}
+
+// CALL BTN
+.call-container{
+  color: $black;
+  position: absolute;
+  right: 20px;
+  top: 34px;
+  font-size: 1.8em;
+  line-height: 0;
+  .call-btn{
+    border: 2px solid $black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .call-number-container{
+    position: absolute;
+    right: -272px;
+    padding-right: 45px;
+    padding-left: 5px;
+    width: 272px;
+    height: 50px;
+    border: 2px solid $black;
+    border-radius: 50px;
+    font-size: 0.8em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+  }
+}
+
+.call-active{
+  display: flex !important;
+  right: 0;
+  opacity: 1;
+}
+
+.hidden{
+  display: none;    
+}
+
+.light-theme{
+  .call-btn, .toggle-icon .bar{border-color: $white;}
+  color: $white !important;
 }

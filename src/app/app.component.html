@@ -1,4 +1,4 @@
-<div id="nav-container">
+<div id="nav-container" [ngClass]="{'light-theme': getCurrentPath()}">
   <div class="toggle-icon">
     <span class="bar"></span>
     <span class="bar"></span>
@@ -22,6 +22,16 @@
   </div>
 </div>
 
+<div class="call-container" [ngClass]="{'light-theme': getCurrentPath()}">
+  <div class="call-number-container">
+    <p><a href="tel:+375293503050"> +375 (29) 350-30-50</a></p>
+  </div>
+  <div class="call-btn">
+    <i class="fa fa-phone"></i>
+  </div>
+</div>
+
+
 
 
 <router-outlet></router-outlet>
@@ -29,7 +39,7 @@
 
 
 
-<footer>
+<footer [ngClass]="{'hidden': getCurrentPath()}">
   <div class="container">
     <div class="col col-1">
       <p>

@@ -1,5 +1,8 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
-declare var jQuery:any;
+import { Location } from '@angular/common';
+
+// FOR jQuery
+declare var $:any;
 
 @Component({
   selector: 'app-root',
@@ -10,14 +13,42 @@ export class AppComponent implements OnInit {
   title = 'app works!';
 
   elementRef: ElementRef;
-  constructor(elementRef: ElementRef) {
+  constructor(elementRef: ElementRef, private _loc:Location) {
     this.elementRef = elementRef;
   };
 
+  getCurrentPath() {
+      let currentPath = this._loc.path();
+      if(currentPath === '/home'){
+        return true;
+      }else{
+        return false
+      }
+  }
+
   ngOnInit() {
-    jQuery("#nav-container").click(function() {
-      jQuery(this).toggleClass("pushed");
-      jQuery('.menu').toggleClass('menu-opened');
+
+    $("#nav-container").click(function() {
+      $(this).addClass("pushed");
+      $(this).css('color', '#fff');
+      $('.menu').addClass('menu-opened');
     });
+
+    $('.menu').mouseleave(function(){
+      $("#nav-container").removeClass("pushed");
+      $(this).removeClass('menu-opened');
+      $("#nav-container").css('color', '#010101');
+    });
+
+    $('.call-btn').mouseenter(function(){
+      $('.call-number-container').css('display', 'flex');
+      $('.call-number-container').css('right', '0');
+      $('.call-number-container').css('opacity', '1');
+    });
+
+    $('.call-number-container').mouseleave(function(){
+      $(this).hide();
+    });
+
   }
 }

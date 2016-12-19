@@ -1,5 +1,43 @@
-<div class="container" style="background-color: #fafafa; width: 960px; margin: 0 auto; text-align: center; padding: 30px 100px;">
-  <h1>
-    Контакты
-  </h1>
+<div class="contact-body">
+  <div class="container">
+    <header>
+      <h1>КОНТАКТЫ</h1>
+    </header>
+    <main>
+      <h2>ООО "Ай-Си-Джи групп"</h2>
+      <p>УНП 192696750</p>
+
+      <div class="contact-item contact-phone">
+        <span>Телефон (velcom):</span>
+        <p><a href="tel:+375293503050">+375 (29) 350-30-50</a></p>
+      </div>
+
+      <div class="contact-item contact-address">
+        <span>Адрес:</span>
+        <p>г. Минск, пр. Победителей 127 офис 293.</p>
+      </div>
+
+      <div class="contact-item contact-email">
+        <span>E-mail:</span>
+        <p><a href="mailto:info@icg.by">info@icg.by</a></p>
+      </div>
+
+      <div class="contact-map">
+        <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [scrollwheel]="scrollwheel">
+          <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+        </sebm-google-map>
+      </div>
+
+      <div class="contact-form">
+        <form method="post" action="send.php">
+          <input type="name" name="name" placeholder="Имя*">
+          <input type="phone" name="phone" placeholder="Телефон*">
+          <input type="email" name="email" placeholder="E-mail*">
+          <textarea name="comments" cols="6" placeholder="Комментарии"></textarea>
+          <button type="submit">ОТПРАВИТЬ</button>
+        </form>
+      </div>
+
+    </main>
+  </div>
 </div>

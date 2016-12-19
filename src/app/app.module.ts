@@ -12,6 +12,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './404/404.component';
 
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -37,9 +39,12 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD25CgEFmom8n2naUvIimVEPuedQH8csLI'
+    }),
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
