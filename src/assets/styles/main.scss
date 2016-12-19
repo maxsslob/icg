@@ -4,16 +4,37 @@
 @import 'base.scss';
 @import 'menu.scss';
 
+
+//MIXINS
+@mixin transition(){
+  transition: all 0.2s ease-in;
+}
+
+@mixin button-default($c){
+  display: block;
+  background-color: transparent;
+  border: 2px solid $c;
+  height: 35px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7px;
+  cursor: pointer;
+  padding: 5px 35px !important;
+  font-family: 'Visby CF Heavy';
+  transition: all 0.1s linear;
+  &:hover{
+    background-color: $c;
+  }
+}
+
 //PAGES
 @import './pages/home.scss';
 @import './pages/contact.scss';
 
 $container-width: 960px;
 $margin-top: 30px;
-
-@mixin transition(){
-  transition: all 0.2s ease-in;
-}
 
 html{height: 100%;}
 
@@ -103,7 +124,7 @@ footer{
 $menu-width: 262px;
 $shadow-width: 8px;
 .menu{
-  position: absolute;
+  position: fixed;
   left: -$menu-width - $shadow-width;
   top: 0;
   width: $menu-width;

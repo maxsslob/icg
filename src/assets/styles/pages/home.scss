@@ -36,20 +36,7 @@
         font-size: 1.7em;
       }
       a{
-        display: block;
-        width: 7em;
-        border: 2px solid $blue-d;
-        text-align: center;
-        height: 2.2em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 7px;
-        font-family: 'Visby CF Heavy';
-        transition: all 0.1s linear;
-        &:hover{
-          background-color: $blue-d;
-        }
+        @include button-default($blue-d);
       }
     }
     footer{

@@ -11,7 +11,7 @@ export class ContactComponent implements OnInit {
   
   lat: number = 53.939813;
   lng: number = 27.467358;
-  zoom: number = 15;
+  zoom: number = 13;
   scrollwheel: boolean = false;
 
   ngOnInit() {
