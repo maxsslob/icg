@@ -35,6 +35,9 @@ $margin-top: 30px;
 //PAGES
 @import './pages/home.scss';
 @import './pages/contact.scss';
+@import './pages/services.scss';
+@import './pages/about.scss';
+@import './pages/landing.scss';
 
 
 
@@ -135,6 +138,7 @@ $shadow-width: 8px;
   color: #ccc;
   box-shadow: $shadow-width 0 $shadow-width 0 rgba(0,0,0,.5);
   transition: left 0.3s ease-in-out;
+  z-index: 99;
   .menu-container{
     width: inherit;
     height: inherit;
@@ -162,6 +166,16 @@ $shadow-width: 8px;
   }
 }
 
+.page-header{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: 25px;
+  font-family: 'Visby CF Heavy';
+}
+
 .active{
   color: white;
 }
@@ -178,6 +192,7 @@ $shadow-width: 8px;
   top: 34px;
   font-size: 1.8em;
   line-height: 0;
+  z-index: 9999;
   .call-btn{
     border: 2px solid $black;
     border-radius: 50%;
@@ -235,5 +250,12 @@ $shadow-width: 8px;
     height: 80%;
     opacity: .1;
     z-index: 0;
+  }
+}
+
+
+@media screen and (min-width: 1450px){
+  body{
+    font-size: 16px !important;
   }
 }
