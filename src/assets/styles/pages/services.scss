@@ -1,0 +1,68 @@
+.services-body{
+    height: calc(100% - 30px);
+    @media screen and (min-width: 1450px){
+      height: calc(100% - 100px);
+    }
+    .container{
+        width: 1200px;
+        height: calc(100%);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        img{            max-width: 90px;        }
+        
+        .item{
+          width: 250px;
+          height: 400px;
+          background-color: #ccc;
+          border-radius: 3px;
+          text-align: center;
+          padding-top: 70px;
+          position: relative;
+          h2{
+            padding: 0 40px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+          }
+          p{
+            text-align: left;
+            padding: 0 30px 0 15px;
+            font-size: 1.1em;
+            font-family: 'Visby CF Medium';
+          }
+          a{
+            position: absolute;
+            bottom: -43px;
+            left: 0;
+            background-color: #ccc;
+            width: inherit;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span{
+              font-family: 'Visby CF Heavy';
+              font-weight: 900;
+              font-size: 0.9em;
+            }
+          }
+          &.item-1{
+            @include service-gradient($green-d, $green-l);
+            @include service-link($green-l);
+          }
+          &.item-2{
+            @include service-gradient($green-l, $green-d);
+            @include service-link($green-d);
+          }
+          &.item-3{
+            @include service-gradient($green-d2, $blue);
+            @include service-link($blue);
+          }
+          &.item-4{
+            @include service-gradient($red-l, $red-d);
+            @include service-link($red-d);
+          }
+        }
+    }
+}
