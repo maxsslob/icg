@@ -2,10 +2,8 @@
   background-image: linear-gradient(101deg, #a61e4d, $red-d);
 }
 
-.landing-body{
+.hero-container{
   height: calc(100% + 20px);
-  background: url('./assets/images/landing/hero.png') 0% 0% no-repeat;
-  background-size: cover;
   margin-top: -20px;
   main{
     width: $container-width;
@@ -21,11 +19,7 @@
       position: relative;
       .cb-scroller{
         position: absolute;
-        left: calc(50% - 60px);
-        & svg path {
-        fill: $red-d;
-        stroke: #fff;
-        }
+        
         span{
           position: relative;
           top: -15px;
@@ -39,18 +33,42 @@
         height: 270px;
         flex-direction: column;
         a{
+          font-size: 0.8em !important;
+          border: 0 !important;
+          &:hover{
+            border: 1px dotted black !important;
+          }
+        }
+        
+      }
+        h1{
+          font-family: 'Visby CF Heavy';
+          margin-bottom: 0;
+        }
+    }
+  }
+}
+
+.landing-body{
+  background: url('./assets/images/landing/hero.png') 0% 0% no-repeat;
+  background-size: cover;
+  main .hero .cb-scroller{
+    left: calc(50% - 60px);
+    & svg path {
+      fill: $red-d;
+      stroke: #fff;
+    }
+  }
+  main .hero{
+    .container{
+      a{
           @include button-default($red-d); 
           width: 230px; color: $white; 
           @include landing-gradient();
-          font-size: 0.8em;
           position: relative;
           top: -13px;
-          border: 0;
-          &:hover{
-            border: 1px dotted black;
-          }
-        }
-        ul{
+      }
+      ul{
           li{
             font-size: 1.3em;
             margin: 3px 0;
@@ -59,17 +77,15 @@
             }
           }
         }
-      }
-        h1{
-          font-size: 2.8em;
-          color: $red-d;
-          font-family: 'Visby CF Heavy';
-          padding-right: 100px;
-          margin-bottom: 0;
-          background: -webkit-linear-gradient(101deg, $red-d, #a61e4d);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
+    }
+
+    h1{
+      font-size: 2.8em;
+      padding-right: 100px;
+      color: $red-d;
+      background: -webkit-linear-gradient(101deg, $red-d, #a61e4d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 }

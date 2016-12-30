@@ -1,0 +1,53 @@
+.context-body{
+  background: url('./assets/images/context/hero.png') 0% 0% no-repeat;
+  background-size: cover;
+  main .hero{
+    .container{
+      display: flex;
+      align-items: flex-end;
+      .hero-form{
+          width: 200px;
+          margin-top: 20px;
+          label{
+            font-family: 'Visby CF Heavy';
+            background-color: $context;
+            padding: 8px 20px;
+            width: 96%;
+            font-size: 0.9em;
+            display: inline-block;
+          }
+          input{
+            min-height: 1em;
+            display: inline-block;
+            padding: 8px 20px;
+            max-width: 96%;
+            border: 0;
+            margin-bottom: 5px;
+            &:focus{
+              outline: 0;
+              outline: 1px dotted $black;
+            }
+          }
+          button{
+            @include button-default($context);
+            margin-top: 0;
+            background-color: $context;
+          }
+      }
+
+      a{
+          @include button-default($context); 
+          width: 230px; color: $black; 
+          @include landing-gradient();
+          position: relative;
+          top: -13px;
+      }
+    }
+
+    h1{
+      font-size: 1.91rem;
+      color: $black;
+      background: $context;
+    }
+  }
+}

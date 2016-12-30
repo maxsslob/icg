@@ -1,0 +1,37 @@
+.instagram-body{
+  background: url('./assets/images/instagram/hero.png') 0% 0% no-repeat;
+  background-size: cover;
+
+  main .hero .cb-scroller{
+    left: calc(50% - 60px);
+    & svg path {
+      fill: $instagram;
+      stroke: #fff;
+    }
+  }
+
+  main .hero{
+      button{
+        @include button-default($instagram); 
+        width: 230px; color: $black; 
+        background-color: $instagram;
+        color: $white;
+        position: relative;
+        top: -6px;
+      }
+
+    h1{
+      font-size: 1.91rem;
+      padding: 8px 20px;
+      color: $instagram2;
+      background: $white;
+    }
+    h2{
+        text-align: center;
+        color: $black;
+        background-color: $white;
+        margin: 4px 130px;
+        padding: 5px 10px;
+    }
+  }
+}

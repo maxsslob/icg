@@ -77,8 +77,11 @@ $margin-top: 30px;
 @import './pages/contact.scss';
 @import './pages/services.scss';
 @import './pages/about.scss';
-@import './pages/landing.scss';
 
+@import './pages/services/landing.scss';
+@import './pages/services/context.scss';
+@import './pages/services/instagram.scss';
+@import './pages/services/seo.scss';
 
 
 html{height: 100%;}

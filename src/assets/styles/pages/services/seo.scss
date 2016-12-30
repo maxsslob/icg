@@ -1,0 +1,33 @@
+.seo-body{
+  background: url('./assets/images/seo/hero.png') 0% 0% no-repeat;
+  background-size: cover;
+
+  main .hero .cb-scroller{
+    left: calc(50% - 60px);
+    & svg path {
+      fill: $seo1;
+      stroke: $black;
+    }
+    & svg circle{
+        fill: $black;
+    }
+  }
+
+  main .hero{
+      button{
+        @include button-default($seo2); 
+        width: 230px; color: $black; 
+        background-color: $seo2;
+        color: $black;
+        position: relative;
+        top: -3px;
+      }
+
+    h1{
+      font-size: 1.91rem;
+      padding: 8px 20px;
+      background-color: $seo1;
+      color: $black;
+    }
+  }
+}
