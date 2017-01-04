@@ -21,6 +21,9 @@
         color: $black;
         position: relative;
         top: -3px;
+        &:hover{
+          border: 1px dotted black;
+        }
       }
 
     h1{
@@ -30,4 +33,140 @@
       color: $black;
     }
   }
+}
+
+.seo-benefits{
+  .container{
+    width: $container-width;
+    margin: 0 auto;
+    margin-top: 50px;
+    .row{
+      display: flex;
+      &:nth-child(1){.col:nth-child(2n){background-color: $seo2;}}
+      &:nth-child(2){.col:nth-child(1){background-color: $seo2;}}
+      .col{
+        width: 465px;
+        height: 200px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        background-color: $seo1;
+        display: flex;
+        &:last-child{margin-right: 0%;}
+        .ico{
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-left: 30px;
+          padding-right: 20px;
+          font-size: 3.99rem;
+        }
+        .text{
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-right: 30px;
+          b{font-size: 1.3rem; font-family: $heavy;}
+          p{margin-top: 3px; font-family: $medium;}
+        }
+      }
+    }
+  }
+}
+
+.seo-cases{
+  .container{
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+    img{width: 400px;}
+    p{
+      font-size: 1.2rem;
+      background-color: $seo1;
+      padding: 5px 0;
+    }
+  }
+}
+
+.seo-clients{
+  text-align: center;
+}
+
+.seo-process{
+  .container{
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    border-right: 3px solid $black;
+    border-left: 3px solid $black;
+    .arrow1, .arrow2{
+      width: 15px;
+      height: 15px;
+      border-left: 2px solid $black;
+      border-bottom: 2px solid $black;
+      position: absolute;
+      top: calc(50% - 8px);
+      transform: skew(10deg, -10deg);
+      transform: rotate(-45deg);
+    }
+    .arrow1{
+      left: -9px;
+    }
+    .arrow2{
+      right: -9px;
+    }
+    .part{
+      margin: 25px 0;
+    }
+    span{
+      display: block;
+      font-family: $heavy;
+
+    }
+  }
+}
+
+.seo-form{
+  .form-h{
+    color: $seo2;
+  }
+  form{
+    button{
+      border-color: $seo1 !important;
+      &:hover{
+        background-color: $seo1 !important;
+        color: $white !important;
+      }
+    }
+  }
+  span{
+    b{
+      color: $seo2;
+    }
+  }
+}
+
+.seo-reviews{
+  .info{
+    background-color: $seo1;
+    color: $black !important;
+  }
+}
+
+.seo{
+  @include service-link($seo1);
+    & > a, & > .container > a{
+      @include button-default($seo1);
+      max-width: 200px;
+      margin: 0 auto;
+      font-size: 0.7rem !important;
+      font-family: $heavy;
+      &:hover{
+        color: $white !important;
+      }
+    }
 }

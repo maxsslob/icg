@@ -38,7 +38,7 @@
   padding: 5px 35px !important;
   font-family: 'Visby CF Heavy';
   transition: all 0.1s linear;
-  font-size: 0.9em;
+  font-size: 0.7rem !important;
   &:hover{
     background-color: darken($c, 5%);
     border-color: darken($c, 5%);
@@ -71,6 +71,14 @@
 
 $container-width: 960px;
 $margin-top: 30px;
+
+$thin: 'Visby CF Thin';
+$light: 'Visby CF Light';
+$regular: 'Visby CF Medium';
+$medium: 'Visby CF Demi';
+$bold: 'Visby CF Bold';
+$extrabold: 'Visby CF Extra';
+$heavy: 'Visby CF Heavy';
 
 //PAGES
 @import './pages/home.scss';

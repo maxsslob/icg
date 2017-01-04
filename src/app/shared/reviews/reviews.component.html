@@ -1,0 +1,18 @@
+<section class="{{serviceName}} {{serviceName}}-reviews reviews">
+  <div class="heading" style="margin-top: 120px;">
+    <h2>ОТЗЫВЫ КЛИЕНТОВ</h2>
+  </div>
+  <div class="container">
+    <div class="review" *ngFor="let review of reviews">
+      <div class="info">
+        <div class="name">{{review.name}}</div>
+        <div class="who">{{review.title}}</div>
+      </div>
+      <div class="review-text">
+        {{review.review}}
+      </div>
+    </div> <!--REVIEW END-->
+
+    <a>ВСЕ ОТЗЫВЫ</a>
+  </div>
+</section>

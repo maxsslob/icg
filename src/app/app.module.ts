@@ -17,6 +17,8 @@ import { LandingComponent } from './landing/landing.component';
 import { SeoComponent } from './seo/seo.component';
 import { ContextComponent } from './context/context.component';
 import { InstagramComponent } from './instagram/instagram.component';
+import { ContactFormComponent } from './shared/contact-form/contact-form.component';
+import { ReviewsComponent } from './shared/reviews/reviews.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -45,7 +47,9 @@ const appRoutes: Routes = [
     LandingComponent,
     SeoComponent,
     ContextComponent,
-    InstagramComponent
+    InstagramComponent,
+    ContactFormComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,

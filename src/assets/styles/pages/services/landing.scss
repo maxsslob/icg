@@ -239,6 +239,12 @@ section{
   }
 }
 
+.landing-reviews{
+  .info{
+    @include landing-gradient();
+  }
+}
+
 .reviews{
   margin-bottom: 80px;
   .container{
@@ -249,7 +255,6 @@ section{
       margin-bottom: 25px;
     }
     .info{
-      @include landing-gradient();
       display: inline-block;
       color: white;
       padding: 3px 2px 2px 1px;

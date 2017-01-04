@@ -12,7 +12,7 @@
             font-family: 'Visby CF Heavy';
             background-color: $context;
             padding: 8px 20px;
-            width: 96%;
+            width: 97%;
             font-size: 0.9em;
             display: inline-block;
           }
@@ -20,7 +20,7 @@
             min-height: 1em;
             display: inline-block;
             padding: 8px 20px;
-            max-width: 96%;
+            max-width: 97%;
             border: 0;
             margin-bottom: 5px;
             &:focus{
@@ -31,7 +31,11 @@
           button{
             @include button-default($context);
             margin-top: 0;
+            width: 97%;
             background-color: $context;
+            max-height: 30px;
+            text-transform: uppercase;
+            font-size: 0.7rem !important;
           }
       }
 
@@ -50,4 +54,165 @@
       background: $context;
     }
   }
+}
+
+.context-global-container{
+  background-color: #fafafa;
+}
+
+.context-main-container{
+  background-color: $white;
+  width: $container-width;
+  margin: 0 auto;
+}
+
+.context-feature-container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  .feature{
+    padding-top: 20px;
+    width: 300px;
+    margin-right: 25px;
+    &:last-child{margin-right: 0}
+    p{
+      font-family: 'Visby CF Demi';
+      padding: 0 20%;
+    }
+  }
+}
+
+.price{
+  text-align: center;
+  position: relative;
+  p{
+    margin: 20px 0;
+    font-size: 5rem;
+    font-family: 'Visby CF Thin';
+  }
+  span{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    font-family: $heavy;
+    color: $seo1;
+    bottom: 2.7rem;
+    padding-right: 157px;
+  }
+}
+
+.context-price{
+  a{position: relative;
+  top: 15px;}
+  span{
+    color: $context !important;
+  }
+}
+
+.se-context{
+  position: relative;
+  top: -70px;
+  .container{
+    width: $container-width;
+    margin: 0 auto;
+    display: flex;
+    .col{
+      background-color: $context;
+      &:first-child{margin-right: 30px}
+      h2{
+        font-family: 'Visby CF Heavy';
+        margin-left: 20px;
+        font-size: 1.7rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      p{
+        margin-left: 20px;
+        padding: 0 20px 10px 0;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+.context-steps{
+  width: 400px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  .row{display: flex; align-items: center; margin: 10px 0; &:hover{.num{background-color: #000; color: #fff;}}}
+  .row:last-child{
+    .num{
+      &::after{
+        display: none;
+      }
+    }
+  }
+  .num{
+    font-family: $heavy;
+    font-size: 1.8rem;
+    background-color: $context;
+    border-radius: 50%;
+    min-width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px dashed #fff;
+    transition: all 0.15s ease-in-out;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: -18px;
+      left: calc(50% - 1px);
+      width: 2px;
+      height: 18px;
+      background-color: $context;
+    }
+  }
+  p{
+    padding-right: 2%;
+    margin: 0px 0 0px 10px;
+  }
+}
+
+.context-form{
+
+  form{
+    button{
+      border-color: $context !important;
+      font-size: 0.7rem !important;
+      font-family: $heavy;
+      &:hover{
+        background-color: $context !important;
+        color: $white;
+      }
+    }
+  }
+  span{
+    b{
+      color: $context;
+    }
+  }
+}
+
+.context-reviews{
+  .info{
+    background-color: $context;
+    color: $black !important;
+  }
+}
+
+.context-clients{text-align: center;}
+
+.context{
+  @include service-link($context);
+    & > a, & > .container > a{
+      @include button-default($context);
+      max-width: 200px;
+      margin: 0 auto;
+      font-size: 0.7rem !important;
+      font-family: $heavy;
+      &:hover{
+        color: $white !important;
+      }
+    }
 }
