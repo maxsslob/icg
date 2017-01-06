@@ -14,7 +14,7 @@
   }
 
   main .hero{
-      button{
+      button, a{
         @include button-default($seo2); 
         width: 230px; color: $black; 
         background-color: $seo2;
