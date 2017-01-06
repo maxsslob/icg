@@ -3,7 +3,7 @@
   background-size: cover;
   main .hero{
     position: relative;
-    top: 75px;
+    top: 30px;
     button, a{
         @include button-default(lighten($context, 10%)); 
         width: 230px; color: $black; 
