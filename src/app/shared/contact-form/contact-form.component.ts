@@ -49,11 +49,17 @@ export class ContactFormComponent implements OnInit {
 
 
   ngOnInit() {
+    $(document).ready(function(){
+      $('#phone').mask('+375(99)999-99-99');
+    });
+    
+
     $('#contactForm').submit(function(){
       var name = $(this).find('input[name=name]');
 		  var phone = $(this).find('input[name="phone"]');
 		  var email = $(this).find('input[name="email"]');
 		  var comments = $(this).find('textarea[name="comments"]');
+      var service = $(this).find('input[name="service"]');
 
 			$.post($(this).prop('action'), $(this).serialize(), function(res) {			
 			}, 'json');

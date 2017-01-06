@@ -4,6 +4,10 @@
 }
 
 .contact-body{
+  @media screen and (min-width: 1400px){
+    height: calc(100% - 100px);
+  }
+  overflow-y: hidden;
   .container{
     width: 400px;
     margin: 0 auto;

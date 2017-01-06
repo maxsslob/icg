@@ -18,7 +18,7 @@
   }
 
   main .hero{
-      button{
+      button, a{
         @include button-default($instagram); 
         width: 230px; color: $black; 
         background-color: $instagram;
