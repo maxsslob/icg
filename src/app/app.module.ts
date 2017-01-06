@@ -32,7 +32,7 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'portfolio', component: PortfolioComponent },
   { path: '404', component: NotFoundComponent },
-  { path: '**', redirectTo: '/404', pathMatch: 'full'}
+  /*{ path: '**', redirectTo: '/404', pathMatch: 'full'}*/
 ];
 
 @NgModule({

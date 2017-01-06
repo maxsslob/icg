@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, AfterViewChecked, ViewChild } from '@angular/core';
 import { Location } from '@angular/common';
 
 // FOR jQuery
@@ -9,7 +9,7 @@ declare var $:any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewChecked {
   title = 'app works!';
 
   elementRef: ElementRef;
@@ -50,5 +50,20 @@ export class AppComponent implements OnInit {
       $(this).hide();
     });
 
+    
+
   }
+
+  ngAfterViewChecked() {        
+      $(document).ready(function(){
+        function scrollToAnchor(){
+        var aTag = $("a[name='"+ 'formAnchor' +"']");
+        $('html,body').animate({scrollTop: aTag.offset().top},'500');
+        }
+
+        $('.anchor').click(function(){
+          scrollToAnchor();
+        })
+      });  
+    } 
 }
