@@ -316,10 +316,32 @@ $shadow-width: 8px;
   left: 0;
 }
 
+@keyframes call-opacity{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes call-opacity-out{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.call-opacity-out{
+  animation: call-opacity 0.5s ease-in-out;
+}
+
 // CALL BTN
 .call-container{
   color: $black;
-  position: absolute;
+  position: fixed;
   right: 20px;
   top: 34px;
   font-size: 1.8em;
@@ -349,8 +371,7 @@ $shadow-width: 8px;
     justify-content: center;
     align-items: center;
     display: none;
-    opacity: 0;
-    transition: all 0.25s ease-in-out;
+    animation: call-opacity 0.5s ease-in-out;
   }
 }
 

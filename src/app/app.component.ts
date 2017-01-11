@@ -19,7 +19,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
 
   getCurrentPath() {
       let currentPath = this._loc.path();
-      if(currentPath === '/home'){
+      if(currentPath === ''){
         return true;
       }else{
         return false
@@ -47,6 +47,8 @@ export class AppComponent implements OnInit, AfterViewChecked {
     });
 
     $('.call-number-container').mouseleave(function(){
+      $(this).addClass('call-opacity-out');
+      $(this).css('opacity', '0');
       $(this).hide();
     });
 

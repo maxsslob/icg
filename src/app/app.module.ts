@@ -20,9 +20,11 @@ import { InstagramComponent } from './instagram/instagram.component';
 import { ContactFormComponent } from './shared/contact-form/contact-form.component';
 import { ReviewsComponent } from './shared/reviews/reviews.component';
 
+import {enableProdMode} from '@angular/core';
+
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent},
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: '', component: HomeComponent},
+  /*{ path: '', redirectTo: '/home', pathMatch: 'full'},*/
   { path: 'about', component: AboutComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'services/landing', component: LandingComponent },
@@ -32,8 +34,10 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'portfolio', component: PortfolioComponent },
   { path: '404', component: NotFoundComponent },
-  /*{ path: '**', redirectTo: '/404', pathMatch: 'full'}*/
+  { path: '**', redirectTo: '/404', pathMatch: 'full'}
 ];
+
+enableProdMode();
 
 @NgModule({
   declarations: [
