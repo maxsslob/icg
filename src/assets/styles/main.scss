@@ -460,6 +460,36 @@ svg:not(:root) {
 }
 
 
+// 404
+.not-found-body{
+  .container{
+    h1{font-size: 10rem; font-family: $heavy; margin-bottom: 0;}
+    h3{
+      text-align: center; position: relative; top: -20px;
+      font-size: 3rem; font-family: $extrabold; margin: 0;
+    }
+    p{
+      font-size: 1.3rem;
+      margin-top: 0;
+      position: relative;
+      padding-left: 9px;
+      padding-bottom: 15px;
+    }
+  }
+  a{
+    @include button-default($blue);
+    background-color: $blue;
+    margin: 0 5px;
+    i{
+      font-size: 1.3em;
+      padding-right: 5px;
+    }
+  }
+  .container{
+    width: 300px;
+  }
+}
+
 
 
 @media screen and (min-width: 1450px){
