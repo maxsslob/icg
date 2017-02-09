@@ -108,22 +108,47 @@ $heavy: 'Visby CF Heavy';
 
 .hidden{display: none;}
 
+.form-container-fixed{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  z-index: 9999999999;
+}
+
 .form-success{
+  position: relative;
   text-align: center;
   background-color: $blue;
-  padding: 30px 30px;
+  padding: 50px 70px;
   margin-bottom: 30px;
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
   color: $white;
+  max-width: 500px;
+  top: calc(50% - 125px);
+  height: 250px;
+  button{
+    position: absolute;
+    right: .5rem;
+    cursor: pointer;
+    top: .5rem;
+    border: 0;
+    background-color: initial;
+    font-size: 3rem;
+  }
+  p{
+    font-family: $bold;
+    font-size: 1.3rem;
+  }
   p:first-child{
       margin: 10px 0;
       font-size: 1.8rem;
       font-family: $heavy;
       //color: $blue;
-  }
-  p:last-child{
-    font-family: $bold;
-    font-size: 1.1rem;
   }
 }
 
@@ -259,16 +284,29 @@ footer{
 
 // MENU
 $menu-width: 262px;
-$shadow-width: 8px;
+$shadow-width: 5px;
+
+.menu-open-darken{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.5);
+  z-index: 50;
+  display: none;
+}
+
 .menu{
+  font-weight: 200;
   position: fixed;
   left: -$menu-width - $shadow-width;
   top: 0;
   width: $menu-width;
   height: 100%;
   background-color: $black;
-  color: #ccc;
-  box-shadow: $shadow-width 0 $shadow-width 0 rgba(0,0,0,.5);
+  color: #aaa;
+  //box-shadow: $shadow-width 0 $shadow-width 0 rgba(0,0,0,.45);
   transition: left 0.3s ease-in-out;
   z-index: 99;
   .menu-container{
@@ -286,13 +324,19 @@ $shadow-width: 8px;
         padding: 8px 0;
       }
       a{
-        font-size: 1.7em;
+        font-size: 1.7rem;
         font-weight: 600;
         transition: all 0.15s ease-in-out;
         padding: 0px 90px 0px 0;
         &:hover{
           color: #efefef;
         }
+      }
+      .sub-menu-item{
+        a{font-size: 1.2rem;}
+        padding-left: 25px;
+        margin-top: 10px;
+        &-next{margin-top: -10px;}
       }
     }
   }
@@ -310,6 +354,20 @@ $shadow-width: 8px;
 
 .active{
   color: white;
+}
+
+.sub-active{
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    left: -16px;
+    top: 8px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
 }
 
 .menu-opened{

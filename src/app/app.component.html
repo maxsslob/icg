@@ -11,8 +11,24 @@
   <div class="menu-container">
     <nav>
       <ul>
-        <li><a routerLink="/" [routerLinkActive]="['active']">Главная</a></li>
-        <li><a routerLink="/services" [routerLinkActive]="['active']">Услуги</a></li>
+        <!--<li><a routerLink="/" [routerLinkActive]="['active']">Главная</a></li>-->
+        <li><a routerLink="/services" [routerLinkActive]="['active']">Услуги</a>
+          <ul>
+            <li [ngClass]="{'hidden': getCurrentPathIsService()}" class="sub-menu-item">
+              <a routerLink="/services/landing" [routerLinkActive]="['sub-active']"> Разработка LP</a>
+            </li>
+            <li [ngClass]="{'hidden': getCurrentPathIsService()}" class="sub-menu-item sub-menu-item-next">
+              <a routerLink="/services/instagram" [routerLinkActive]="['sub-active']"> Продвижение <br>в Instagram</a>
+            </li>
+            <li [ngClass]="{'hidden': getCurrentPathIsService()}" class="sub-menu-item sub-menu-item-next">
+              <a routerLink="/services/seo" [routerLinkActive]="['sub-active']"> SEO</a>
+            </li>
+            <li [ngClass]="{'hidden': getCurrentPathIsService()}" class="sub-menu-item sub-menu-item-next">
+              <a routerLink="/services/context" [routerLinkActive]="['sub-active']"> Контекстная реклама</a>
+            </li>
+          </ul>
+        </li>
+        
         <!--<li><a routerLink="/portfolio" [routerLinkActive]="['active']">Кейсы</a></li>
         <li><a routerLink="/blog" (click)="this._router.navigate(['/blog']);">Блог</a></li>-->
         <li><a routerLink="/contact" [routerLinkActive]="['active']">Контакты</a></li>
@@ -20,6 +36,10 @@
       </ul>
     </nav>
   </div>
+</div>
+
+<div class="menu-open-darken">
+
 </div>
 
 <div class="call-container" [ngClass]="{'light-theme': getCurrentPath()}">
@@ -39,7 +59,7 @@
 
 
 
-<footer [ngClass]="{'hidden': getCurrentPath()}">
+<!--<footer [ngClass]="{'hidden': getCurrentPath()}">
   <div class="container">
     <div class="col col-1">
       <p>
@@ -53,8 +73,6 @@
       <nav class="footer-nav">
         <ul>
           <li><a routerLink="/">Главная</a></li>
-          <!--<li><a routerLink="/portfolio">Кейсы</a></li>-->
-         <!-- <li><a href="/blog">Блог</a></li>-->
         </ul>
         <ul>
           <li><a routerLink="/services">Услуги</a></li>
@@ -84,4 +102,4 @@
       </p>
     </div>
   </div>
-</footer>
+</footer>-->

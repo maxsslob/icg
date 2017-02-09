@@ -26,18 +26,39 @@ export class AppComponent implements OnInit, AfterViewChecked {
       }
   }
 
+  getCurrentPathIsService() {
+      let currentPath = this._loc.path();
+      console.log(currentPath);
+      if(currentPath === '/services/landing' || currentPath === '/services/instagram' || currentPath === '/services/seo' || currentPath === '/services/context'){
+        return false;
+      }else{
+        return true
+      }
+  }
+
   ngOnInit() {
 
     $("#nav-container").click(function() {
       $(this).addClass("pushed");
       $(this).css('color', '#fff');
       $('.menu').addClass('menu-opened');
+      setTimeout(function(){$('.menu-open-darken').show();}, 200);
     });
 
-    $('.menu').mouseleave(function(){
+    // HIDE MENU WHEN CLICKING ON MENU ITEMS
+    $('.menu-container nav ul li a').click(function(){
       $("#nav-container").removeClass("pushed");
-      $(this).removeClass('menu-opened');
+      $('.menu').removeClass('menu-opened');
       $("#nav-container").css('color', '#010101');
+      $('.menu-open-darken').hide();
+    });
+
+    // HIDE MENU WHEN MOUSE LEAVES THE MENU
+    $('.menu-open-darken').mouseover(function(){
+      $("#nav-container").removeClass("pushed");
+      $('.menu').removeClass('menu-opened');
+      $("#nav-container").css('color', '#010101');
+      $('.menu-open-darken').hide();
     });
 
     $('.call-btn').mouseenter(function(){

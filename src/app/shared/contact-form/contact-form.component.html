@@ -9,7 +9,7 @@
       <span>Позвоните нам</span>
       <div class="tel"><a href="tel:+375293503050">+375 (29) 350-30-50</a></div>
     </div>
-    <div class="form-container" [hidden]="submitted">
+    <div class="form-container">
     <span><b>ИЛИ</b>Оставьте заявку</span>
     
     <form (ngSubmit)="onSubmit()" #contactForm="ngForm" action="send.php" method="POST" id="contactForm">
@@ -38,9 +38,12 @@
       <button type="submit">ОТПРАВИТЬ</button>
     </form>
     </div>
-    <div class="form-success  {{ serviceName }}-success" [hidden]="!submitted">
-      <p>Спасибо! Ваша заявка отправлена.</p>
-      <p>В ближайшее время с Вами свяжется наш специалист.</p>
+    <div class="form-container-fixed" [hidden]="!submitted">
+      <div class="form-success  {{ serviceName }}-success">
+        <p>Спасибо! Ваша заявка отправлена.</p>
+        <p>Мы свяжемся с Вами в самое ближайшее время.</p>
+        <button class="form-success-close" (click)="submitted = !submitted"><i class="fa fa-close"></i></button>
+      </div>
     </div>
 
   </div><!--CONTAINER END-->
