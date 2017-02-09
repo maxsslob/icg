@@ -28,7 +28,6 @@ export class AppComponent implements OnInit, AfterViewChecked {
 
   getCurrentPathIsService() {
       let currentPath = this._loc.path();
-      console.log(currentPath);
       if(currentPath === '/services/landing' || currentPath === '/services/instagram' || currentPath === '/services/seo' || currentPath === '/services/context'){
         return false;
       }else{
@@ -61,16 +60,14 @@ export class AppComponent implements OnInit, AfterViewChecked {
       $('.menu-open-darken').hide();
     });
 
-    $('.call-btn').mouseenter(function(){
+    $('.call-btn').mouseover(function(){
       $('.call-number-container').css('display', 'flex');
       $('.call-number-container').css('right', '0');
       $('.call-number-container').css('opacity', '1');
     });
 
     $('.call-number-container').mouseleave(function(){
-      $(this).addClass('call-opacity-out');
-      $(this).css('opacity', '0');
-      $(this).hide();
+      setTimeout(function(){$('.call-number-container').fadeOut();}, 5000);
     });
 
     

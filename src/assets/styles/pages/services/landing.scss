@@ -249,32 +249,6 @@ section{
   }
 }
 
-.reviews{
-  margin-bottom: 80px;
-  .container{
-    width: 500px;
-    margin: 0 auto;
-    .review{
-      margin-top: 25px;
-      margin-bottom: 25px;
-    }
-    .info{
-      display: inline-block;
-      color: white;
-      padding: 3px 2px 2px 1px;
-      margin-bottom: 10px;
-      .name{
-        font-size: 1.5em;
-        font-family: 'Visby CF Demi';
-      }
-      .who{
-        font-family: 'Visby CF Heavy';
-        font-size: 0.8em;
-      }
-    }
-  }
-}
-
 .landing-form{
   .form-h{
     color: $red-d;

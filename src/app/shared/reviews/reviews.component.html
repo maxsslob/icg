@@ -2,13 +2,16 @@
   <div class="heading" style="margin-top: 120px;">
     <h2>ОТЗЫВЫ КЛИЕНТОВ</h2>
   </div>
-  <div class="container">
+  <div class="container" id="review-slider">
     <div class="review" *ngFor="let review of reviews">
-      <div class="info">
-        <div class="name">{{review.name}}</div>
-        <div class="who">{{review.title}}</div>
+      <div class="info-container">
+        <img src="{{ review.imgUrl }}" alt="Фото">
+        <div class="info">
+          <div class="name">{{review.name}}</div>
+          <div class="who">{{review.title}}</div>
+        </div>
       </div>
-      <div class="review-text">
+      <div class="review-text" style="max-width: 500px;">
         {{review.review}}
       </div>
     </div> <!--REVIEW END-->
@@ -16,3 +19,4 @@
     <!--<a>ВСЕ ОТЗЫВЫ</a>-->
   </div>
 </section>
+<br><br><br>    <br><br><br>  <br><br><br> <br><br><br> 
