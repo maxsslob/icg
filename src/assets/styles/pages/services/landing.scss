@@ -90,6 +90,46 @@
   }
 }
 
+.description{
+  .stats{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 15px;
+    .stat{
+      &:hover{
+        span{
+          background-color: #555;
+          box-shadow: 0 0 0 5px #ccc;
+          border-color: $black;
+          font-size: 1.05rem;
+          padding: 13px 0;
+        }
+      }
+      span{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 15px 0px;
+        text-align: center;
+        border-radius: 50%;
+        font-family: $heavy;
+        color: white;
+        border: 2px solid $lp-red;
+        box-shadow: 0 0 0 4px $black;
+        background-color: $black;
+        transition: all 0.25s ease-in-out;
+        & + p{
+          max-width: 50px;
+          margin: 9px 12px 0 0;
+          text-align: center;
+          font-family: $heavy;
+          font-size: 8px !important;
+        }
+      }
+    }
+  }
+}
+
 section{
   .heading{
     text-align: center;
@@ -135,6 +175,7 @@ section{
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
         span{
           font-family: 'Visby CF Heavy';
           font-weight: 900;
@@ -210,15 +251,43 @@ section{
 }
 
 .landing-cases{
+  position: relative;
+  .rslides_nav{
+    background-color: #fff !important;
+    font-size: 2.5rem !important;
+    transition: all 0.25s ease-in-out;
+    border: 0 !important;
+    padding: 0 !important;
+    font-family: $medium;
+    z-index: 9;
+    &:hover{
+      color: #ccc !important;
+    }
+  }.prev{
+    position: absolute;
+    bottom: 100px;
+    left: calc(50% - 430px);
+  }.next{
+    position: absolute;
+    bottom: 100px;
+    right: calc(50% - 400px);
+  }
   .container{
     width: $container-width;
     margin: 0 auto;
+    .case-container{
+      width: 960px;
+      margin: 0 auto;
+    }
     .case{
+      margin: 0 auto;
       display: flex;
+      justify-content: center;
       align-items: center;
       margin-top: 50px;
+      margin-left: 10%;
       .preview{
-        width: 40%;
+        width: 60%;
         img{
           max-width: 100%;
         }

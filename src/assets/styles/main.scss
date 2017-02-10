@@ -506,6 +506,35 @@ svg:not(:root) {
   }
 }
 
+.clients-section{
+  position: relative;
+  ul, li{width: 100%;}
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+  .rslides_nav{
+    background-color: #fff !important;
+    font-size: 2.5rem !important;
+    transition: all 0.25s ease-in-out;
+    border: 0 !important;
+    padding: 0 !important;
+    font-family: $medium;
+    z-index: 9;
+    &:hover{
+      color: #ccc !important;
+    }
+  }.prev{
+    position: absolute;
+    bottom: -80px;
+    left: calc(50% - 350px);
+  }.next{
+    position: absolute;
+    bottom: -80px;
+    right: calc(50% - 350px);
+  }
+}
+
 // Reviews
 .reviews{
   margin-bottom: 80px;

@@ -21,6 +21,7 @@ import { ContactFormComponent } from './shared/contact-form/contact-form.compone
 import { ReviewsComponent } from './shared/reviews/reviews.component';
 
 import {enableProdMode} from '@angular/core';
+import { ClientsComponent } from './shared/clients/clients.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -53,7 +54,8 @@ enableProdMode();
     ContextComponent,
     InstagramComponent,
     ContactFormComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    ClientsComponent
   ],
   imports: [
     BrowserModule,

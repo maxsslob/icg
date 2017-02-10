@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, AfterViewChecked, ViewChild } from '@angular/core';
 import { Location } from '@angular/common';
+import { Router, NavigationEnd } from '@angular/router'; 
 
 // FOR jQuery
 declare var $:any;
@@ -13,7 +14,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
   title = 'app works!';
 
   elementRef: ElementRef;
-  constructor(elementRef: ElementRef, private _loc:Location) {
+  constructor(elementRef: ElementRef, private _loc:Location, private router: Router) {
     this.elementRef = elementRef;
   };
 
@@ -36,6 +37,14 @@ export class AppComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
+
+    // SCROLL TO TOP ON ROUTER CHANGE
+    this.router.events.subscribe((evt) => {
+      if(!(evt instanceof NavigationEnd)){
+        return;
+      }
+      document.body.scrollTop = 0;
+    })
 
     $("#nav-container").click(function() {
       $(this).addClass("pushed");
@@ -78,7 +87,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
       $(document).ready(function(){
         function scrollToAnchor(){
         var aTag = $("a[name='"+ 'formAnchor' +"']");
-        $('html,body').animate({scrollTop: aTag.offset().top},'500');
+          $('html,body').animate({scrollTop: aTag.offset().top},'500');
         }
 
         $('.anchor').click(function(){
