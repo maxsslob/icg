@@ -9,6 +9,9 @@
     width: $container-width;
     margin: 0 auto;
     height: 100%;
+    @media screen and (max-width: $mobile){
+      width: 100%;
+    }
     .hero{
       display: flex;
       align-items: center;
@@ -17,6 +20,10 @@
       height: 100%;
       width: inherit;
       position: relative;
+      @media screen and (max-width: $mobile){
+        width: 90%;
+        margin: 0 auto;
+      }
       .cb-scroller{
         position: absolute;
         
@@ -32,6 +39,9 @@
         width: inherit;
         height: 270px;
         flex-direction: column;
+        @media screen and (max-width: $mobile){
+          width: 100%;
+        }
         a{
           font-size: 0.8em !important;
           border: 0 !important;
@@ -43,6 +53,11 @@
       }
         h1{
           font-family: 'Visby CF Heavy';
+          @media screen and (max-width: $mobile){
+             font-size: 1.5rem !important;
+             padding-right: 0 !important;
+             text-align: center;
+          }
           margin-bottom: 0;
         }
     }
@@ -53,23 +68,44 @@
   .container{
     width: $container-width;
     margin: 0 auto;
+    @media screen and (max-width: $mobile){
+      width: 95%;
+    }
     .lp-for{
       margin-top: 70px;
       h3{
         font-size: 1.4rem;
+        @media screen and (max-width: $mobile){
+          font-size: 1.5rem;
+          text-align: center;
+        }
       }
       .items{
         display: flex;
         justify-content: space-between;
         margin-top: 50px;
+        @media screen and (max-width: $mobile){
+          flex-direction: column;
+          text-align: center;
+        }
         .item{
           text-align: center;
+          @media screen and (max-width: $mobile){
+            width: 45%;
+            margin: 0 auto;
+            text-align: center;
+          }
           img{
             height: 80px;
           }
           p{
             max-width: $container-width / 5;
             font-size: 1.2rem;
+            @media screen and (max-width: $mobile){
+              max-width: 100% !important; 
+              width: 100% !important;
+              font-size: 1.4rem;
+            }
           }
         }
       }
@@ -77,8 +113,16 @@
     .lp-about{
       display: flex;
       margin-top: 90px;
+      @media screen and (max-width: $mobile){
+         flex-direction: column;
+         text-align: center;
+      }
       img{
         margin-right: 50px;
+        @media screen and (max-width: $mobile){
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
       }
       h3{
         margin: 0;
@@ -138,7 +182,14 @@
     display: flex;
     align-items: flex-start;
     margin-top: 15px;
+    @media screen and (max-width: $mobile){
+      justify-content: center;
+      p{margin: 10px 0 0 0 !important;}    
+    }
     .stat{
+      @media screen and (max-width: $mobile){
+        margin-right: 10px;
+      }
       &:hover{
         span{
           background-color: #555;
@@ -193,12 +244,22 @@ section{
     margin-top: 30px;
     margin-bottom: 80px;
     display: flex;
+    @media screen and (max-width: $mobile){
+      width: 95%;
+      flex-direction: column;
+    }
     .item{
       width: 220px;
       background-color: #ccc;
       position: relative;
       padding: 10px;
       font-family: 'Visby CF Heavy';
+      @media screen and (max-width: $mobile){
+        width: 70%;
+        margin-left: 15% !important;
+        margin-right: 15%;
+        margin-bottom: 80px;
+      }
       .price{
         width: 100%;
         left: 0;
@@ -219,6 +280,9 @@ section{
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        @media screen and (max-width: $mobile){
+          width: 100%;
+        }
         span{
           font-family: 'Visby CF Heavy';
           font-weight: 900;
@@ -277,6 +341,9 @@ section{
   .container{
     width: $container-width;
     margin: 0 auto;
+    @media screen and (max-width: $mobile){
+      width: 95%;
+    }
   }
 }
 
@@ -310,17 +377,29 @@ section{
     position: absolute;
     bottom: 100px;
     left: calc(50% - 430px);
+    @media screen and (max-width: $mobile){
+      left: 5px;
+    }
   }.next{
     position: absolute;
     bottom: 100px;
     right: calc(50% - 400px);
+    @media screen and (max-width: $mobile){
+      right: 5px;
+    }
   }
   .container{
     width: $container-width;
     margin: 0 auto;
+    @media screen and (max-width: $mobile){
+      width: 95%;
+    }
     .case-container{
       width: 960px;
       margin: 0 auto;
+      @media screen and (max-width: $mobile){
+        width: 95%;
+      }
     }
     .case{
       margin: 0 auto;
@@ -329,14 +408,26 @@ section{
       align-items: center;
       margin-top: 50px;
       margin-left: 10%;
+      @media screen and (max-width: $mobile){
+        flex-direction: column;
+        margin-left: 0 !important;
+      }
       .preview{
         width: 60%;
+        @media screen and (max-width: $mobile){
+          width: 80%;
+        }
         img{
           max-width: 100%;
         }
       }
       .description{
         width: 60%;
+        @media screen and (max-width: $mobile){
+          width: 100%;
+          padding: 0;
+          text-align: center;
+        }
         padding-left: 50px;
         padding-right: 150px;
         h3{
@@ -373,10 +464,17 @@ section{
 }
 
 .service-form{
+  margin-bottom: 30px;
   .form-h{
     font-size: 1.1em;
   }
   span{
+    @media screen and (max-width: $mobile){
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin-top: 35px;
+    }
     b{
       opacity: .8;
       font-size: 1.2rem;
@@ -386,6 +484,10 @@ section{
   .container{
     width: 600px;
     margin: 0 auto;
+    @media screen and (max-width: $mobile){
+      width: 95%;
+      margin-top: 50px;
+    }
     form{
       @include input-textarea-styles();
       display: flex;
@@ -393,6 +495,10 @@ section{
       padding-left: 11.5rem;
       position: relative;
       top: -42px;
+      @media screen and (max-width: $mobile){
+        top: 10px;
+        padding-left: 0;
+      }
       input, textarea{
         font-size: 1.3rem;
       }
@@ -415,12 +521,19 @@ section{
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @media screen and (max-width: $mobile){
+        flex-direction: column;
+      }
       .tel{
         font-family: 'Visby CF Light';
-        font-size: 2.9rem;
+        font-size: 2em;
         position: relative;
+        margin-top: 15px;
         bottom: 3px;
         display: inline-block;
+        @media screen and (max-width: $mobile){
+
+        }
       }
     }
   }

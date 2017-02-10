@@ -4,7 +4,6 @@
 @import 'base.scss';
 @import 'menu.scss';
 
-
 //MIXINS
 @mixin transition(){
   transition: all 0.2s ease-in;
@@ -69,6 +68,8 @@
   }
 }
 
+$mobile: 450px;
+
 $container-width: 960px;
 $margin-top: 30px;
 
@@ -94,6 +95,22 @@ $heavy: 'Visby CF Heavy';
 .ng-valid[required], .ng-valid.required  {
   border-bottom: 3px solid #42A948 !important; /* green */
 }
+
+.mobile-only{
+  display: none;
+  @media screen and (max-width: $mobile){
+    display: block;
+  }
+}
+@media screen and (max-width: $mobile){
+  .mobile-call-btn{
+    position: fixed;
+    right: 1.5rem;
+    top: 2rem;
+    font-size: 2rem;
+  }
+}
+
 
 .ng-invalid:not(form)  {
   //border-bottom: 3px solid #a94442 !important; /* red */
@@ -131,6 +148,9 @@ $heavy: 'Visby CF Heavy';
   max-width: 500px;
   top: calc(50% - 125px);
   height: 250px;
+  @media screen and (max-width: $mobile){
+    height: 225px;
+  }
   button{
     position: absolute;
     right: .5rem;
@@ -143,12 +163,18 @@ $heavy: 'Visby CF Heavy';
   p{
     font-family: $bold;
     font-size: 1.3rem;
+    @media screen and (max-width: $mobile){
+      font-size: 1em;
+    }
   }
   p:first-child{
       margin: 10px 0;
       font-size: 1.8rem;
       font-family: $heavy;
       //color: $blue;
+      @media screen and (max-width: $mobile){
+        font-size: 1.5em;
+      }
   }
 }
 
@@ -183,7 +209,7 @@ body{
   overflow-x: hidden;
 }
 
-footer{
+/*footer{
   width: 100%;
   height: 100px;
   background-color: $black;
@@ -255,8 +281,8 @@ footer{
   }
   .col{@include transition()}
 }
-
-.home-body{
+*/
+/*.home-body{
   footer{
     &:hover{
       color: $white !important;
@@ -279,7 +305,7 @@ footer{
     }
   }
 }
-
+*/
 
 
 // MENU
@@ -508,6 +534,9 @@ svg:not(:root) {
   img{
     display: block;
     margin: 0 auto;
+    @media screen and (max-width: $mobile){
+      max-width: 90%;    
+    }
   }
   .rslides_nav{
     background-color: #fff !important;
@@ -524,10 +553,16 @@ svg:not(:root) {
     position: absolute;
     bottom: -80px;
     left: calc(50% - 350px);
+    @media screen and (max-width: $mobile){
+      left: 5px;
+    }
   }.next{
     position: absolute;
     bottom: -80px;
     right: calc(50% - 350px);
+    @media screen and (max-width: $mobile){
+      right: 5px;
+    }
   }
 }
 
@@ -549,14 +584,23 @@ svg:not(:root) {
     position: absolute;
     bottom: -200px;
     left: calc(50% - 290px);
+    @media screen and (max-width: $mobile){
+      left: 5px;
+    }
   }.next{
     position: absolute;
     bottom: -200px;
     right: calc(50% - 290px);
+    @media screen and (max-width: $mobile){
+      right: 5px !important;
+    }
   }
   .container{
     width: 500px;
     margin: 0 auto;
+    @media screen and (max-width: $mobile){
+      width: 90%;
+    }
     .review{
       margin-top: 25px;
       margin-bottom: 25px;
@@ -633,9 +677,22 @@ svg:not(:root) {
 }
 
 
-$mobile: 450px;
 // MOBILE
 @media screen and (max-width: $mobile){
+  .call-container{
+    display: none;
+  }
+
+  #nav-container{
+    p{
+      display: none;
+    }
+  }
+
+  .page-header{
+    font-size: 0.5em;
+    margin-top: 58px !important;
+  }
 
 }
 
