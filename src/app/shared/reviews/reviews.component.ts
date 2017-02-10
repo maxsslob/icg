@@ -31,19 +31,19 @@ export class ReviewsComponent implements OnInit {
 
    constructor(router: Router) { 
       router.events.subscribe((url:any) => console.log(url));
-      if(router.url === '/services/instagram'){
+      if(router.url.startsWith('/services/instagram')){
         this.serviceName =  'instagram';
         
       }; 
-      if(router.url === '/services/seo'){
+      if(router.url.startsWith('/services/seo')){
         this.serviceName =  'seo';
 
       }; 
-      if(router.url === '/services/context'){
+      if(router.url.startsWith('/services/context')){
         this.serviceName =  'context';
 
       };
-      if(router.url === '/services/landing'){
+      if(router.url.startsWith('/services/landing')){
         this.serviceName =  'landing';
 
       };

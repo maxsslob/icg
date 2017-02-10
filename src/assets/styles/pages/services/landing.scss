@@ -57,6 +57,7 @@
              font-size: 1.5rem !important;
              padding-right: 0 !important;
              text-align: center;
+             margin-top: 70px;
           }
           margin-bottom: 0;
         }
@@ -526,13 +527,13 @@ section{
       }
       .tel{
         font-family: 'Visby CF Light';
-        font-size: 2em;
+        font-size: 3.1em;
         position: relative;
-        margin-top: 15px;
         bottom: 3px;
         display: inline-block;
         @media screen and (max-width: $mobile){
-
+          margin-top: 15px;
+          font-size: 2em;
         }
       }
     }

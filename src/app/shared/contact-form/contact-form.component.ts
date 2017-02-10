@@ -16,6 +16,8 @@ export class ContactFormComponent implements OnInit {
   serviceName: string = "instagram";
   serviceHeader: string = "ОСТАВЬТЕ ЗАЯВКУ СЕЙЧАС";
 
+  
+
   model = new Client(1, '', '', '');
 
   submitted = false;
@@ -27,21 +29,23 @@ export class ContactFormComponent implements OnInit {
   get diagnostic(){ return JSON.stringify(this.model); }
 
    constructor(router: Router) {
+
+     
     
       router.events.subscribe((url:any) => console.log(url));
-      if(router.url === '/services/instagram'){
+      if(router.url.startsWith('/services/instagram')){
         this.serviceName =  'instagram';
         this.serviceHeader = "МЫ ЗАСТАВИМ INSTAGRAM РАБОТАТЬ НА ВАС";
       }; 
-      if(router.url === '/services/seo'){
+      if(router.url.startsWith('/services/seo')){
         this.serviceName =  'seo';
         this.serviceHeader = "НАЧНИТЕ ПРОДВИГАТЬ ВАШ САЙТ УЖЕ СЕЙЧАС";
       }; 
-      if(router.url === '/services/context'){
+      if(router.url.startsWith('/services/context')){
         this.serviceName =  'context';
         this.serviceHeader = "СТАНЬТЕ ЛИДЕРОМ ТЕМАТИКИ С НАМИ";
       };
-      if(router.url === '/services/landing'){
+      if(router.url.startsWith('/services/landing')){
         this.serviceName =  'landing';
         this.serviceHeader = "НАЧНИТЕ ПРОДАВАТЬ С НАМИ!";
       };
