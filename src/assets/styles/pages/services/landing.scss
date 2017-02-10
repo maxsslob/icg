@@ -380,6 +380,7 @@ section{
     left: calc(50% - 430px);
     @media screen and (max-width: $mobile){
       left: 5px;
+      z-index: 99;
     }
   }.next{
     position: absolute;

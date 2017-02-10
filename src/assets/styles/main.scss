@@ -106,8 +106,10 @@ $heavy: 'Visby CF Heavy';
   .mobile-call-btn{
     position: fixed;
     right: 1.5rem;
-    top: 2rem;
+    top: 1.62rem;
     font-size: 2rem;
+    z-index: 99;
+    padding: 9px;
   }
 }
 
@@ -346,7 +348,8 @@ $shadow-width: 5px;
         padding: 8px 0;
       }
       a{
-        font-size: 1.7rem;
+        //font-size: 1.7rem;
+        font-size: 1.6rem;
         font-weight: 600;
         transition: all 0.15s ease-in-out;
         padding: 0px 90px 0px 0;
@@ -555,6 +558,7 @@ svg:not(:root) {
     left: calc(50% - 350px);
     @media screen and (max-width: $mobile){
       left: 5px;
+      z-index: 99;
     }
   }.next{
     position: absolute;
@@ -562,6 +566,7 @@ svg:not(:root) {
     right: calc(50% - 350px);
     @media screen and (max-width: $mobile){
       right: 5px;
+      z-index: 99;
     }
   }
 }
@@ -586,6 +591,7 @@ svg:not(:root) {
     left: calc(50% - 290px);
     @media screen and (max-width: $mobile){
       left: 5px;
+      z-index: 99;
     }
   }.next{
     position: absolute;
@@ -593,6 +599,7 @@ svg:not(:root) {
     right: calc(50% - 290px);
     @media screen and (max-width: $mobile){
       right: 5px !important;
+      z-index: 99;
     }
   }
   .container{
