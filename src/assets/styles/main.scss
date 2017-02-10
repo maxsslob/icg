@@ -312,10 +312,6 @@ $shadow-width: 5px;
   .menu-container{
     width: inherit;
     height: inherit;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     display: flex;
     align-items: center;
     margin-left: 35px;
@@ -636,6 +632,12 @@ svg:not(:root) {
   }
 }
 
+
+$mobile: 450px;
+// MOBILE
+@media screen and (max-width: $mobile){
+
+}
 
 
 @media screen and (min-width: 1450px){

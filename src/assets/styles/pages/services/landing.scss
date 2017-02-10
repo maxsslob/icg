@@ -49,6 +49,49 @@
   }
 }
 
+.landing-about{
+  .container{
+    width: $container-width;
+    margin: 0 auto;
+    .lp-for{
+      margin-top: 70px;
+      h3{
+        font-size: 1.4rem;
+      }
+      .items{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        .item{
+          text-align: center;
+          img{
+            height: 80px;
+          }
+          p{
+            max-width: $container-width / 5;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .lp-about{
+      display: flex;
+      margin-top: 90px;
+      img{
+        margin-right: 50px;
+      }
+      h3{
+        margin: 0;
+        font-family: $heavy;
+        font-size: 1.4rem;
+      }
+      p{
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
 .landing-body{
   background: url('./assets/images/landing/hero.png') 0% 0% no-repeat;
   background-size: cover;
