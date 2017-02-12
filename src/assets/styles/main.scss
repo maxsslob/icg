@@ -321,7 +321,7 @@ $shadow-width: 5px;
   top: 0;
   left: 0;
   background-color: rgba(0,0,0,.5);
-  z-index: 50;
+  z-index: 999;
   display: none;
 }
 
@@ -336,7 +336,7 @@ $shadow-width: 5px;
   color: #aaa;
   //box-shadow: $shadow-width 0 $shadow-width 0 rgba(0,0,0,.45);
   transition: left 0.3s ease-in-out;
-  z-index: 99;
+  z-index: 9999;
   .menu-container{
     width: inherit;
     height: inherit;
