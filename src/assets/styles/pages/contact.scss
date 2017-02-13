@@ -1,17 +1,28 @@
 .sebm-google-map-container {
   height: 200px;
   width: 400px;
+  @media screen and (max-width: $mobile){
+    width: 90%;
+    display: block;
+    margin-left: 10%;
+  }
 }
 
 .contact-body{
-  @media screen and (min-width: 1400px){
-    height: calc(100% - 100px);
-  }
+  height: 100%;
   overflow-y: hidden;
   .container{
     width: 400px;
     margin: 0 auto;
     font-size: 14px;
+    @media screen and (max-width: $mobile){
+      width: 95%;
+    }
+    header{
+      font-size: 0.7rem;
+      position: relative;
+      top: 0px;
+    }
     h1{
       text-align: center;
       font-size: 1.5em;
@@ -25,6 +36,9 @@
         font-size: 2.3em;
         margin: 0;
         margin-top: 50px;
+        @media screen and (max-width: $mobile){
+          font-size: 1.6rem;
+        }
         & + p{
           text-align: center;
           font-family: 'Visby CF Heavy';
@@ -35,6 +49,9 @@
 
       .contact-item{
         margin-bottom: 20px;
+        @media screen and (max-width: $mobile){
+          text-align: center;
+        }
         span{
           font-family: 'Visby CF Bold';
           font-size: 1.2em;
@@ -48,11 +65,18 @@
       .contact-phone{
         p{
           font-size: 3.1em;
+          @media screen and (max-width: $mobile){
+            font-size: 2.15rem;
+          }
         }
       }
       .contact-address, .contact-email{
         p{
           font-size: 1.95em;
+          @media screen and (max-width: $mobile){
+            margin: 0 10%;
+            font-size: 1.5rem;
+          }
         }
       }
 

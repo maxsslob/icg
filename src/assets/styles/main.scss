@@ -341,8 +341,27 @@ $shadow-width: 5px;
     width: inherit;
     height: inherit;
     display: flex;
-    align-items: center;
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: flex-start;
     margin-left: 35px;
+    header{
+      left: 0;
+      text-align: center;
+      padding-top: 3px;
+      color: $white;
+      h1{
+        margin: 0;
+        padding-top: 8px;
+        font-size: 4.16em;
+        font-weight: 400;
+      }
+      p{
+        margin-top: -7px;
+        font-weight: bold;
+        font-size: 0.8em;
+      }
+    }
     nav{
       li{
         padding: 8px 0;
@@ -364,7 +383,25 @@ $shadow-width: 5px;
         &-next{margin-top: -10px;}
       }
     }
+    .menu-bottom{
+      span{font-size: 0.7rem; transition: all 0.15s ease-in; cursor: default; &:hover{color: $white;}}
+      ul{
+        margin-bottom: 5px;
+        li{
+          display: inline-block;
+          a{
+            font-size: 1.5rem;
+            padding: 0 5px;
+            transition: all 0.15s ease-in;
+            &:hover{
+              color: $white;
+            }
+          }
+        }
+      }
+    }
   }
+
 }
 
 .page-header{
@@ -414,7 +451,7 @@ $shadow-width: 5px;
   position: fixed;
   right: 20px;
   top: 34px;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   line-height: 0;
   z-index: 9999;
   .call-btn{

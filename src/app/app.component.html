@@ -9,6 +9,10 @@
 
 <div class="menu">
   <div class="menu-container">
+    <header>
+      <h1>ICG</h1>
+      <p>DIGITAL AGENCY</p>
+    </header>
     <nav>
       <ul>
         <!--<li><a routerLink="/" [routerLinkActive]="['active']">Главная</a></li>-->
@@ -35,6 +39,23 @@
         <li><a routerLink="/about" [routerLinkActive]="['active']">О Компании</a></li>
       </ul>
     </nav>
+    <div class="menu-bottom">
+      <ul class="social">
+          <li><a href="https://www.instagram.com/icg__by/" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-instagram"></i>
+          </a></li>
+          <li><a href="https://vk.com/icg_by" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-vk"></i>
+          </a></li>
+          <li><a href="https://www.facebook.com/icg.by" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-facebook"></i>
+          </a></li>
+          <li><a href="https://behance.net/icg-by" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-behance"></i>
+          </a></li>
+        </ul>
+        <span>ООО "Ай-Си-Джи групп"<br>&copy; ICG, {{year}}</span>
+    </div>
   </div>
 </div>
 
@@ -51,7 +72,7 @@
   </div>
 </div>
 
-<div class="mobile-only mobile-call-btn">
+<div class="mobile-only mobile-call-btn" [ngClass]="{'light-theme': getCurrentPath()}">
   <a href="tel:+375293503050"><i class="fa fa-phone"></i></a>
 </div>
 

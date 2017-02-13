@@ -1,15 +1,23 @@
 .about-body{
   height: 100%;
-  @media screen and (min-width: 1450px){
-    height: calc(100% - 100px);
+  .page-header{
+    @media screen and (max-width: $mobile){
+      top: -20px;
+    }
   }
   .container{
     width: 700px;
     margin: 0 auto;
     height: 100%;
     padding-top: 110px;
+    @media screen and (max-width: $mobile){
+      width: 95%;
+    }
     section{
       font-size: 1.33em;
+      @media screen and (max-width: $mobile){
+        font-size: 1rem;
+      }
       b{
         font-family: 'Visby CF Heavy';
       }
@@ -21,13 +29,26 @@
     h2{
       font-family: 'Visby CF Extra';
       margin-bottom: -25px;
+      @media screen and (max-width: $mobile){
+        text-align: center;
+      }
     }
     .number-container{
       display: flex;
       justify-content: space-between;
+      @media screen and (max-width: $mobile){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+      }
       .number{
         width: 150px;
         cursor: default;
+        @media screen and (max-width: $mobile){
+          width: 45%;
+          text-align: center;
+        }
         &:hover{
           span{color: $blue;}
         }
@@ -35,6 +56,11 @@
           transition: all 0.15s linear;
           font-size: 9em;
           font-family: 'Visby CF Heavy';
+          @media screen and (max-width: $mobile){
+            font-size: 7rem;
+            position: relative;
+            top: 15px;
+          }
         }
         p{
           padding-left: 5px;
@@ -43,6 +69,12 @@
           font-family: 'Visby CF Heavy';
           font-weight: 600;
           font-size: 1.3em;
+          @media screen and (max-width: $mobile){
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-top: 0;
+            font-size: 1.2rem;
+          }
         }
       }
     }
@@ -51,6 +83,9 @@
         display: inline-block;
         width: calc(700px/3 - 20px);
         margin-right: 10px;
+        @media screen and (max-width: $mobile){
+          width: 100%;
+        }
       }
     }
   }

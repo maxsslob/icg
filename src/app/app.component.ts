@@ -12,6 +12,8 @@ declare var $:any;
 })
 export class AppComponent implements OnInit, AfterViewChecked {
   title = 'app works!';
+  now = new Date();
+  year = this.now.getFullYear();
 
   elementRef: ElementRef;
   constructor(elementRef: ElementRef, private _loc:Location, private router: Router) {

@@ -1,15 +1,20 @@
 .services-body{
-    height: calc(100% - 30px);
-    @media screen and (min-width: 1450px){
-      height: calc(100% - 100px);
+    height: 100%;
+    .page-header{
+      @media screen and (max-width: $mobile){top: -20px;}
     }
     .container{
         width: 1200px;
-        height: calc(100%);
+        height: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        @media screen and (max-width: $mobile){
+          flex-direction: column;
+          width: 95%;
+          justify-content: flex-start;
+        }
         img{            max-width: 90px;        }
         
         .item{
@@ -20,14 +25,20 @@
           text-align: center;
           padding-top: 70px;
           position: relative;
+          @media screen and (max-width: $mobile){
+            margin-bottom: 80px;
+            &:first-child{
+              margin-top: 100px;
+            }
+          }
           h2{
             padding: 0 40px;
             margin-top: 10px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
           }
           p{
-            text-align: left;
-            padding: 0 30px 0 15px;
+            text-align: center;
+            padding: 0 30px 0 30px;
             font-size: 1.1em;
             font-family: 'Visby CF Medium';
           }
