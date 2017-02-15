@@ -119,19 +119,30 @@
          text-align: center;
       }
       img{
-        margin-right: 50px;
+        width: 100%;
+        position: relative;
+        top: 6px;
         @media screen and (max-width: $mobile){
+          width: 60%;
           margin-right: 0;
           margin-bottom: 30px;
         }
       }
       h3{
         margin: 0;
+        padding-left: 50px;
         font-family: $heavy;
         font-size: 1.4rem;
+        @media screen and (max-width: $mobile){
+          padding-left: 0;
+        }
       }
       p{
+        padding-left: 50px;
         font-size: 1.2rem;
+        @media screen and (max-width: $mobile){
+          padding-left: 0;
+        }
       }
     }
   }
@@ -379,7 +390,7 @@ section{
     bottom: 100px;
     left: calc(50% - 430px);
     @media screen and (max-width: $mobile){
-      left: 5px;
+      left: -10px;
       z-index: 99;
     }
   }.next{

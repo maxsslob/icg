@@ -89,7 +89,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
       $(document).ready(function(){
         function scrollToAnchor(){
         var aTag = $("a[name='"+ 'formAnchor' +"']");
-          $('html,body').animate({scrollTop: aTag.offset().top},'500');
+          $('html,body').animate({scrollTop: aTag.offset().top},'200');
         }
 
         $('.anchor').click(function(){
