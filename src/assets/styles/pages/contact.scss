@@ -1,6 +1,7 @@
 .sebm-google-map-container {
-  height: 200px;
-  width: 400px;
+  height: calc(50vh + 25px);
+  width: 100%;
+  position: relative;
   @media screen and (max-width: $mobile){
     width: 90%;
     display: block;
@@ -8,9 +9,16 @@
   }
 }
 
+.contact-bg{
+  height: 415px !important;
+  top: 115px !important;
+}
+
 .contact-body{
-  height: 100%;
   overflow-y: hidden;
+  @media screen and (max-width: $mobile){
+    overflow-y: visible;
+  }
   .container{
     width: 400px;
     margin: 0 auto;
@@ -72,7 +80,7 @@
       }
       .contact-address, .contact-email{
         p{
-          font-size: 1.95em;
+          font-size: 1.87em;
           @media screen and (max-width: $mobile){
             margin: 0 10%;
             font-size: 1.5rem;

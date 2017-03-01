@@ -17,18 +17,12 @@
 
       <div class="contact-item contact-address">
         <span>Адрес:</span>
-        <p>г. Минск, пр. Победителей 127 офис 293.</p>
+        <p>г. Минск, пр. Богдановича 153Б, офис 403.</p>
       </div>
 
       <div class="contact-item contact-email">
         <span>E-mail:</span>
         <p><a href="mailto:info@icg.by">info@icg.by</a></p>
-      </div>
-
-      <div class="contact-map">
-        <sebm-google-map [styles]="mystyles" [latitude]="lat" [longitude]="lng" [zoom]="zoom" [scrollwheel]="scrollwheel">
-          <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
-        </sebm-google-map>
       </div>
 
       <!--<div class="contact-item contact-form">
@@ -44,5 +38,11 @@
       </div>-->
 
     </main>
+    
   </div>
+   <div class="contact-map">
+        <sebm-google-map [styles]="mystyles" [latitude]="lat" [longitude]="lng" [zoom]="zoom" [scrollwheel]="scrollwheel">
+          <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+        </sebm-google-map>
+      </div>
 </div>
