@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, AfterViewChecked, ViewChild } from '@angular/core';
 
 // FOR jQuery
 declare var $:any;
@@ -8,7 +8,7 @@ declare var $:any;
   templateUrl: './landing.component.html',
   styles: []
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent implements OnInit, AfterViewChecked {
 
   constructor() { }
 
@@ -26,5 +26,10 @@ export class LandingComponent implements OnInit {
         });
       });
   }
+
+
+  ngAfterViewChecked() {        
+        
+    } 
 
 }

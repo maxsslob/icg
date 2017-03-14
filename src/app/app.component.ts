@@ -10,7 +10,7 @@ declare var $:any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent implements OnInit, AfterViewChecked {
+export class AppComponent implements OnInit {
   title = 'app works!';
   now = new Date();
   year = this.now.getFullYear();
@@ -85,16 +85,5 @@ export class AppComponent implements OnInit, AfterViewChecked {
 
   }
 
-  ngAfterViewChecked() {        
-      $(document).ready(function(){
-        function scrollToAnchor(){
-        var aTag = $("a[name='"+ 'formAnchor' +"']");
-          $('html,body').animate({scrollTop: aTag.offset().top},'200');
-        }
-
-        $('.anchor').click(function(){
-          scrollToAnchor();
-        })
-      });  
-    } 
+  
 }

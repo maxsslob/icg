@@ -32,5 +32,16 @@
     ga('create', 'UA-90122435-1', 'auto');
     ga('send', 'pageview');
   </script>
+  <script type="text/javascript">
+        function scrollToAnchor(){
+        var aTag = $("a[name='"+ 'formAnchor' +"']");
+          $('html,body').animate({scrollTop: aTag.offset().top},'200');
+        }
+
+        $('.anchor').click(function(){
+          scrollToAnchor();
+          console.log(1);
+        })
+  </script>
 </body>
 </html>
