@@ -2,6 +2,9 @@
   .container{
     width: $container-width;
     margin: 0 auto;
+    @media screen and (max-width: $mobile){
+      width: 95%;
+    }
   }
 }
 
@@ -39,6 +42,9 @@
         background-color: $white;
         margin: 1px 130px;
         padding: 5px 10px;
+        @media screen and (max-width: $mobile){
+          margin: 1px 0;
+        }
     }
   }
 }
@@ -60,6 +66,9 @@
     font-family: $light;
     font-size: 1.3em;
     padding: 0 50px 70px 50px;
+    @media screen and (max-width: $mobile){
+      padding: 0 15px 70px 15px;
+    }
   }
 }
 
@@ -74,9 +83,16 @@
   .container{
     display: flex;
     margin-top: 70px;
+    @media screen and (max-width: $mobile){
+      flex-direction: column; 
+      align-items: center;
+    }
     .col{
       width: calc(960px / 4);
       text-align: center;
+      @media screen and (max-width: $mobile){
+        margin: 10px 0;
+      }
       p{font-size: 1.2em; font-family: $medium;}
       i{
         font-size: 3rem;
@@ -90,6 +106,9 @@
   .additional-container{
     width: 550px;
     margin: 0 auto;
+    @media screen and (max-width: $mobile){
+      width: 95%;
+    }
     i{
       font-size: 2rem;
     }
@@ -103,14 +122,24 @@
       margin: 0;
       font-size: 2em;
       font-family: $extrabold;
+      @media screen and (max-width: $mobile){
+        margin-top: 10px;
+      }
     }
   }
   .container .row{
     display: flex;
     margin-top: 70px;
+    @media screen and (max-width: $mobile){
+      flex-direction: column;
+      align-items: center;
+    }
     .col{
       width: calc(960px / 5);
       text-align: center;
+      @media screen and (max-width: $mobile){
+        margin: 10px 0;
+      }
       p{font-size: 1.2em; font-family: $medium;}
       i{
         font-size: 3rem;
@@ -139,11 +168,16 @@
   .container .row{
     display: flex;
     margin-top: 70px;
-    
+    @media screen and (max-width: $mobile){
+      flex-direction: column;
+      align-items: center;
+    }
     .col{
       width: calc(960px / 6);
       text-align: center;
-      
+      @media screen and (max-width: $mobile){
+        margin: 10px 0;
+      }
       p{font-size: 1.2em; font-family: $medium;}
       i{
         font-size: 3rem;
@@ -161,21 +195,35 @@
   .case{
     display: flex;
     margin-top: 70px;
+    @media screen and (max-width: $mobile){
+      flex-direction: column;
+    }
     .preview{
       margin-right: 50px;
       width: 450px;
+      @media screen and (max-width: $mobile){
+        width: 100%;
+        margin: 10px auto;
+      }
       img{
         max-width: 400px;
       }
     }
     .case-info{
       width: 450px;
+      @media screen and (max-width: $mobile){
+        width: 100%;
+      }
       h3{
         font-family: $heavy;
         font-size: 1.6em;
         margin: 0;
         margin-top: -7px;
         margin-bottom: 50px;
+        @media screen and (max-width: $mobile){
+          margin-top: 25px;
+          margin-bottom: 30px;
+        }
         a{
           background-color: transparent;
         }
@@ -187,7 +235,11 @@
         .row{
           display: flex;
           align-items: center;
-          p{width: 40%; font-size: 1rem; margin: 10px 0; font-family: $medium;}
+          p{width: 40%; font-size: 1rem; margin: 10px 0; font-family: $medium;
+            @media screen and (max-width: $mobile){
+              width: 55%;
+            }
+          }
           b{width: 35%; text-align: right; font-size: 1.3rem; font-family: $heavy;}
         }
         .element{
@@ -198,6 +250,9 @@
             font-size: 17.6rem;
             font-family: $thin;
             width: 150px;
+            @media screen and (max-width: $mobile){
+              display: none;
+            }
           }
           .arrow-caption{
             position: absolute;
@@ -205,6 +260,9 @@
             font-size: 1.2rem;
             top: 54.5%;
             transform: rotate(90deg);
+            @media screen and (max-width: $mobile){
+              display: none;
+            }
           }
         }
       }
@@ -214,6 +272,10 @@
         order: 2;
         margin-right: 0;
         margin-left: 50px;
+        @media screen and (max-width: $mobile){
+          order: 0;
+          margin-left: 0;
+        }
       }
       .element{
           left: -80px !important;
@@ -242,8 +304,16 @@
     padding-bottom: 40px;  
     h1, h3, h4{margin: 0;}
     h3{font-size: 1.15rem; opacity: .7; margin-top: -5px;}
-    h4{font-size: 1.5rem; margin-bottom: -15px;}
-    h1{font-size: 5rem;}
+    h4{font-size: 1.5rem; margin-bottom: -15px;
+      @media screen and (max-width: $mobile){
+        margin-bottom: -7px;
+      }
+    }
+    h1{font-size: 5rem;
+      @media screen and (max-width: $mobile){
+        font-size: 3rem;
+      }
+    }
     a{   
       margin-top: 30px !important;
       color: $white !important;
@@ -261,11 +331,18 @@
       text-align: right;
       font-family: $heavy;
       font-size: 1.2rem;
+      @media screen and (max-width: $mobile){
+        text-align: center;
+      }
     }
   }
   .items{
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: $mobile){
+      flex-direction: column;
+      align-items: center;
+    }
     .item{
       position: relative;
       &:hover{
